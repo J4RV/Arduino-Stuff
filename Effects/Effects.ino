@@ -17,7 +17,7 @@ void setup() {
 void loop() {
   //Punto de fuego rebotando.
   for(int i = 0; i<=3; i++){
-    Gravity();    
+    Gravity(255,220,255,0.95,0.8,0);    
   }
   
   //Coche fantastico arcoiris.

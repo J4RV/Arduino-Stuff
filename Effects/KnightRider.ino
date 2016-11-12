@@ -34,18 +34,4 @@ void Trail(int startPos, int trail){
   }
 }
 
-uint32_t Wheel(byte WheelPos, float alpha) {
-  WheelPos = 255 - WheelPos;
-  if(WheelPos < 85) {
-    return strip.Color((255 - WheelPos * 3) * alpha , 0, WheelPos * 3 * alpha);
-  }
-  if(WheelPos < 170) {
-    WheelPos -= 85;
-    return strip.Color(0, WheelPos * 3 * alpha, (255 - WheelPos * 3) * alpha);
-  }
-  WheelPos -= 170;
-  return strip.Color(WheelPos * 3* alpha,  (255 - WheelPos * 3)*alpha, 0);
-}
-
-
 

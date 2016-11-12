@@ -1,3 +1,4 @@
+//La misma funcion Wheel que viene en los ejemplos, pero le he añadido el parametro alpha para controlar el brillo.
 uint32_t Wheel(byte WheelPos, float alpha) {
   WheelPos = 255 - WheelPos;
   if(WheelPos < 85) {
@@ -18,6 +19,7 @@ void Smooth(float r, float g, float b){
 }
 
 void SmoothPixel(int i, float r, float g, float b){
+  //Cojemos los valores RGB del strip.Color que nos pasan (formato int), y los suavizamos segun los parametros de entrada.
   long lngRGB = strip.getPixelColor(i);
   
   uint8_t u8R = (uint8_t)((lngRGB >> 16) & 0xff),

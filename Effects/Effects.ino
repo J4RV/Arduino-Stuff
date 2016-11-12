@@ -15,11 +15,20 @@ void setup() {
 }
 
 void loop() {
-  for(int i = 0; i<=6; i++){
+  //Punto de fuego rebotando.
+  for(int i = 0; i<=3; i++){
     Gravity();    
   }
-  for(int i = 0; i<=5; i++){
-    KnightRider(20,30);
+  
+  //Coche fantastico arcoiris.
+  for(int i = 0; i<=3; i++){
+    KnightRider(50, 0.25, 4, 20);
+  }
+  
+  //Coche fantastico.
+  KnightRiderSetHue(0);
+  for(int i = 0; i<=6; i++){
+    KnightRider(30, 0, 0, 6);
   }
 }
 

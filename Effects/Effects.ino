@@ -10,13 +10,15 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMLEDS, PIN, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   strip.begin();
-  strip.setBrightness(128);
+  strip.setBrightness(255);
   strip.show();
 }
 
 void loop() {
+  strip.clear();
+  StrangerThings(" BEHIND YOU ", 1200);
   //Punto de fuego rebotando.
-  for(int i = 0; i<=3; i++){
+  for(int i = 0; i<=5; i++){
     Gravity(255,220,255,0.95,0.8,0);    
   }
   

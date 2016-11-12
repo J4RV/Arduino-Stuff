@@ -12,7 +12,6 @@ void Gravity(uint8_t red, uint8_t green, uint8_t blue, float redsmooth, float gr
     int pos = CalcPosition(t);
     strip.setPixelColor(pos, red, green, blue);
     strip.show();
-    //Haciendo que el color rojo y amarillo tengan suavizado, conseguimos un bonico efecto de fuego.
     Smooth(redsmooth,greensmooth,bluesmooth);
   }
 }

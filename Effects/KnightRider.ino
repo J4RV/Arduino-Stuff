@@ -35,6 +35,7 @@ void Trail(int startPos, int trail, float rainbowTrail){
     }
 
     strip.setPixelColor(pos, color);
+    strip.setPixelColor(NUMLEDS-pos, color); //     <--    For a mirrored effect
   }
 }
 
